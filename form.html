@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <script src="./jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-8 mx-auto" >
+                <form>
+                    <h3>registration form</h3>
+                    <input type="text" placeholder="Enter Your Name" class="form-control mt-3" id="name">
+                    <span></span>
+                    <input type="email" placeholder="Enter Your Email" class="form-control mt-3" id="email">
+                    <span></span>
+                    <input type="password" placeholder="Enter Your Name" class="form-control mt-3" id="password">
+                    <span></span>
+                    <button class="btn btn-dark mt-3" id="register">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        $(document).ready(function(){
+            // $("#name").focus(function(){
+            // $(this).css('background-color','yellow')
+            // })
+            // $("#name").blur(function(){
+            //     $(this).css({
+            //       'background-color':'black',
+            //       'color':'white'
+
+            //     })
+            // })
+
+             //name validation
+            $("#name").keyup(function(){
+                let name = $(this).val()
+                let nameRE = /^[a-zA-Z\s]{3,}$/
+                if(!nameRE.test(name)){
+                    $(this).next("span").show().text("only allow alphabets").css("color","red")
+                    $(this).css("border","2px solid red")
+                }
+                else{
+                    $(this).next("span").hide()
+                    $(this).css("border","2px solid green")
+                }
+            })
+
+
+                //email validation
+             $("#email").keyup(function(){
+                let email = $(this).val()
+                let emailRE = /^[a-z0-9]{5,}[@][a-z]{5}[.][a]{3}$/
+                if(!emailRE.test(email)){
+                    $(this).next("span").show().text("format not allow ").css("color","red")
+                    $(this).css("border","2px solid red")
+                }
+                else{
+                    $(this).next("span").hide()
+                    $(this).css("border","2px solid green")
+                }
+            })
+           
+        })
+    </script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js"></script>
+</body>
+</html>

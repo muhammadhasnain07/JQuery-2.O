@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>append</title>
+
+    <script src="./jquery.js"></script>
+</head>
+
+<style>
+    .heighlight{
+    background-color: black;
+    color: whitesmoke;
+    }
+</style>
+<body>
+
+    
+
+    <p>this is first para</p>
+
+    <button id="add">Add Class</button>
+    <button id="remove">Remove Class</button>
+    <button id="toggle">Toggle Class</button>
+
+    <ul id="list">
+        <li>html</li>
+        <li>css</li>
+        <li>js</li>
+        <li>bootstrap</li>
+    </ul>
+
+    <button id="prepend">prepend</button>
+    <button id="append">append</button>
+    <button id="after">after</button>
+    <button id="before">before</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#add").click(function(){
+                $("p").addClass("heighlight")
+            })
+            $("#remove").click(function(){
+                $("p").removeClass("heighlight")
+            })
+
+            $("#toggle").click(function(){
+                $("p").toggleClass("heighlight")
+            })
+
+                 $("#before").click(function(){
+                $("#list").before("<li>php<li/>")
+            })
+            $("#after").click(function(){
+                $("#list").after("<li>ali<li/>")
+                })
+            let item = ['hasnain', 'ali', 'gul zaman', 'shamoil', 'umair']
+            let index =0;
+            $("#append").click(function(){
+                if(index < item.length){
+                    $("#list").append("<li>" + item[index] + "</li>" )
+                    index++
+                }else{
+                    alert("item added")
+                }
+            })
+            $("#prepend").click(function(){
+                if(index<item.length){
+                    $("#list").prepend("<li>" + item[index] + "</li>")
+                    index++
+                }else{
+                    alert("item aded")
+                }
+            }) 
+
+
+
+        })
+
+    </script>
+
+
+</body>
+</html>

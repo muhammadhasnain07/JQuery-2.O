@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery.js"></script>
+</head>
+<body>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, maiores sint deserunt architecto cum earum eligendi dolorem modi facilis laudantium fugiat debitis possimus quam soluta suscipit hic vitae, laboriosam ea!</p>
+
+    <button id="h">hide</button>
+    <button id="s">show</button>
+    <button id="t">toggle</button>
+
+
+
+
+    <script>
+        $(document).ready(function(){
+            $("#h").click(function(){
+                $("p").hide(2000)
+            })
+
+            $("#s").click(function(){
+                $("p").show(3000)
+            })
+
+            $("#t").click(function(){
+                $("p").toggle(3000)
+            })
+        })
+    </script>
+</body>
+</html>

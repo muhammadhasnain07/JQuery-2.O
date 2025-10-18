@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery.js"></script>
+</head>
+<body>
+    <!-- <button id="fadeIn">fadeIn</button>
+    <button id="fadeOut">fadeOut</button>
+    <button id="fadeToggle">fadeToggle</button>
+    <button id="fadeTo">fadeTo</button>
+    <p id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque quaerat facilis voluptas nemo laborum culpa. Fugit iste quam eum voluptas!</p>
+
+
+
+    <p id="p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed corporis adipisci necessitatibus officia blanditiis, deserunt temporibus incidunt eligendi dignissimos molestias!</p>
+
+    <button id="slideUp">slideUp</button>
+    <button id="slideDown">slideDown</button>
+    <button id="slideToggle">slideToggle</button>
+ -->
+
+
+
+
+
+
+        <div class="box" style="width: 200px; height: 200px; background-color: brown; margin: 30px; position: relative;"></div>
+        <button id="animate">animate</button>
+
+
+    <script>
+        
+            // $("#fadeIn").click(function(){
+            //     $("#para").fadeIn(1000)
+            // })
+        
+            
+            // $("#fadeOut").click(function(){
+            //     $("#para").fadeOut(1000)
+            // })
+
+            // $("#fadeToggle").click(function(){
+            //     $("#para").fadeToggle(1000)
+            // })
+
+
+            // $("#fadeTo").click(function(){
+            //     $("#para").fadeTo(1000 , 0.5)
+            // })
+
+            //   $("#slideUp").click(function(){
+            //     $("#p").slideUp(1000)
+            // })  
+
+            
+            // $("#slideDown").click(function(){
+            //     $("#p").slideDown(1000)
+            // })
+
+
+            // $("#slideToggle").click(function(){
+            //     $("#p").slideToggle(1000 )
+            // })
+
+            $(document).ready(function(){
+                let animate =false
+
+            $("#animate").click(function(){
+                if(!animate){
+                    $(".box").animate({
+                        "left" : "300px",
+                        "border-radius" : "100px",
+                        "width" : "200px",
+                        "heigth" : "200px"
+
+                    },2000)
+
+                    animate = true
+                }else{
+                    $(".box").animate({
+                        "left" : "0px",
+                        "border-radius" : "0px",
+                    },2000)
+                }
+                
+            
+
+            
+        })
+
+    })
+
+        
+    </script>
+
+
+</body>
+</html>
